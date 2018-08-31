@@ -122,7 +122,9 @@ class Shape{
 		}
 	}
 }
-
+public float get2(float t) {
+	return get(t, 1.70158);
+}
 float get5(float t) {
 	float value=(t==1.0)?1.0:-pow(4, -6 * t) + 1;
 	return value;
@@ -132,9 +134,7 @@ public float get(float t, float s) {
 	return t * t * ((s + 1.0) * t + s) + 1.0;
 }
 
-public float get2(float t) {
-	return get(t, 1.70158);
-}
+
 public float get3(float t) {
 	return t * t * t;
 }

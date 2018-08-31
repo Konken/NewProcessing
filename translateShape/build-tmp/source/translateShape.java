@@ -138,7 +138,9 @@ class Shape{
 		}
 	}
 }
-
+public float get2(float t) {
+	return get(t, 1.70158f);
+}
 public float get5(float t) {
 	float value=(t==1.0f)?1.0f:-pow(4, -6 * t) + 1;
 	return value;
@@ -148,9 +150,7 @@ public float get(float t, float s) {
 	return t * t * ((s + 1.0f) * t + s) + 1.0f;
 }
 
-public float get2(float t) {
-	return get(t, 1.70158f);
-}
+
 public float get3(float t) {
 	return t * t * t;
 }
@@ -159,7 +159,7 @@ public float get4(float t) {
 }
   public void settings() { 	size(960,960); }
   static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "--present", "--window-color=#EA0202", "--stop-color=#E81C1C", "translateShape" };
+    String[] appletArgs = new String[] { "translateShape" };
     if (passedArgs != null) {
       PApplet.main(concat(appletArgs, passedArgs));
     } else {
